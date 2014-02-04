@@ -204,7 +204,7 @@
     /*
      * Extend String.prototype iff ES5 is available
      */
-    if (typeof (Object.defineProperty) === 'function')(function (obj, meth) {
+    if (typeof (Object.defineProperty) === 'function' && Object.defineProperties)(function (obj, meth) {
         var f2m = function (f) {
             return function () {
                 return f(this);
